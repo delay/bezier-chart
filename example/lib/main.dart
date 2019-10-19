@@ -143,7 +143,8 @@ class MyHomePage extends StatelessWidget {
               subtitle: Text("Dynamic date range"),
               onTap: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => Sample13())),
-            ),          ],
+            ),
+          ],
         ),
       ),
     );
@@ -407,7 +408,8 @@ Widget sample4(BuildContext context) {
       height: MediaQuery.of(context).size.height / 2,
       width: MediaQuery.of(context).size.width,
       child: BezierChart(
-        bezierChartScale: BezierChartScale.MONTHLY,
+        bezierChartScale: BezierChartScale.YEARLY,
+        bezierChartAggregation: BezierChartAggregation.AVERAGE,
         fromDate: fromDate,
         toDate: toDate,
         selectedDate: toDate,
@@ -427,6 +429,9 @@ Widget sample4(BuildContext context) {
               DataPoint<DateTime>(value: 80, xAxis: date4),
               DataPoint<DateTime>(value: 14, xAxis: date5),
               DataPoint<DateTime>(value: 30, xAxis: date6),
+              DataPoint<DateTime>(value: 59, xAxis: date6),
+              DataPoint<DateTime>(value: 27, xAxis: date6),
+              DataPoint<DateTime>(value: 13, xAxis: date6),
             ],
           ),
         ],
