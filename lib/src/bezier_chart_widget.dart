@@ -1621,7 +1621,7 @@ bool _areAllPositive(Iterable<double> list) {
 String formatAsIntOrDouble(double str) {
   final values = str.toString().split(".");
   if (values.length > 1) {
-    final int intDecimal = int.parse(values[1]);
+    //final int intDecimal = int.parse(values[1]);
     //if (intDecimal == 0) { //updated by delay to remove decimal from legend
     //remove decimal
     return str.toInt().toString();
